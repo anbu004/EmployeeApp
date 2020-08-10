@@ -1,0 +1,25 @@
+import {
+  createSwitchNavigator,
+  createAppContainer,
+} from 'react-navigation';
+import  Dashboard from '../screen/Dashboard/Dashboard';
+import  ClientCreate from '../screen/ClientCreate/ClientCreate';
+import  Login from '../screen/Login/Login';
+import PinScreen from '../screen/PinScreen/PinScreen';
+import  Splash from '../screen/Splash/Splash';
+import  ERPwebview from '../screen/ERPwebview/ERPwebview';
+
+const AppSwitchNavigator = createSwitchNavigator({
+    splash: { screen: Splash },
+    pinScreen: { screen: PinScreen },
+    dashboard: { screen: Dashboard },
+    Login: { screen: Login },
+    clientCreate: { screen: ClientCreate },
+    ERPwebview: { screen: ERPwebview },
+  },
+  {
+    initialRouteName: 'splash'
+  });
+
+  
+  export default AppRoutes = createAppContainer(AppSwitchNavigator);
