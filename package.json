@@ -23,6 +23,7 @@
     "react-native-image-picker": "^2.3.3",
     "react-native-odoo-promise-based": "^0.6.8",
     "react-native-simple-toast": "^1.1.2",
+    "react-native-splash-screen": "^3.2.0",
     "react-native-vector-icons": "^6.7.0",
     "react-native-video": "^4.4.5",
     "react-native-webview": "^10.4.0",

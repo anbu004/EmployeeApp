@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
     Button, View, Text, Image, StyleSheet, SafeAreaView,
     TouchableOpacity, List, ListItem, ListView,
-    FlatList, ScrollView, Platform, TextInput, Picker
+    FlatList, ScrollView, Platform, TextInput, Picker,BackHandler
 } from 'react-native';
 import { Container } from 'native-base';
 import HeaderComponent from '../../Component/Common/Header';
@@ -15,7 +15,25 @@ export default class ClientCreate extends Component {
         this.state = {
             resourcePath: {},
         };
+        this.navigator = null;
+    
+        this.handleBack = (() => {
+          const { navigate } = this.props.navigation;
+          navigate('dashboard');
+          return true;
+        }).bind(this)
     }
+
+      componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handleBack);
+      }
+    
+      componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBack);
+      }
+
+
+
     goToPostPage = () => {
         this.props.navigation.navigate('dashboard')
     };
@@ -24,7 +42,7 @@ export default class ClientCreate extends Component {
     };
     render() {
         return (
-            <Container>
+            <Container style={styles.container}>
                 <HeaderComponent logOut={this.logOut} headerTitle='Client Create' navigation={this.props.navigation} />
                 <ScrollView>
                     <ClientCreateForm goToPostPage={this.goToPostPage} />
@@ -33,3 +51,8 @@ export default class ClientCreate extends Component {
         );
     }
 }
+const styles = StyleSheet.create({
+    container: {
+      backgroundColor: 'black'
+    },
+})

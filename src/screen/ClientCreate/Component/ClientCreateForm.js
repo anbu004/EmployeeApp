@@ -27,24 +27,25 @@ const submitBtnText = {
 const textBox = {
   textLabel: {
     fontSize: 17,
+    color: 'white',
   },
   inputText: {
-    color: "black",
+    color: "white",
     width: "100%",
-    backgroundColor: "#e5e5e5",
+    backgroundColor: "#444444",
     borderRadius: 7,
     height: 40,
     marginTop: 4,
     borderWidth: 2,
     marginBottom: 10,
-    borderColor: "#e5e5e5",
+    borderColor: "#444444",
   },
 
 };
 const button = {
   color: "black",
   width: "100%",
-  backgroundColor: "#e5e5e5",
+  backgroundColor: "#444444",
   borderRadius: 7,
   height: 40,
   marginTop: 4,
@@ -58,7 +59,7 @@ const buttonText = {
   fontWeight: 'bold',
 }
 const subElStyle = {
-  elevation: 4, shadowOffset: {}, shadowColor: "grey", shadowOpacity: 0.5, shadowRadius: 10, padding: 5, width: '100%', marginBottom: 5, backgroundColor: "#f3f3f3", borderRadius: 8,
+  elevation: 4, shadowOffset: {}, shadowColor: "grey", shadowOpacity: 0.5, shadowRadius: 10, padding: 5, width: '100%', marginBottom: 5, backgroundColor: "#202225", borderRadius: 8,
 }
 
 
@@ -350,6 +351,12 @@ class ClientCreateForm extends Component {
               placeholderTextColor="#003f5c"
               onChangeText={(profile_id) => this.setState({ profile_id })}
               value={this.state.profile_id} />
+               {/* <Icon
+    name='trash'
+    color='#fb5b5a'
+    size={20}
+    style={{ alignItems: 'center', justifyContent: 'center',}}
+  /> */}
           </View>
           <View>
             <Text style={textBox.textLabel}>Name</Text>
@@ -418,16 +425,21 @@ class ClientCreateForm extends Component {
               confirmBtnText="Confirm"
               cancelBtnText="Cancel"
               customStyles={{
+                dateText:{
+                  color: 'white',
+                },
                 dateIcon: {
                   position: 'absolute',
                   left: 0,
                   top: 4,
                   marginLeft: 0,
-
+                  color:'white'
                 },
-                dateInput: {
-                  marginLeft: 36
-                }
+                dateInput:{
+                  marginLeft: 36,
+                  borderWidth: 0,
+                  borderColor: "#444444",
+                },
                 // ... You can check the source to find the other keys.
               }}
               onDateChange={(date_of_birth) => { this.setState({ date_of_birth }) }}

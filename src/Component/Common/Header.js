@@ -4,7 +4,7 @@ import{ Header, Left, Right, Body, Button,Icon } from 'native-base';
 import colors from '../../config/colors';
 import fonts from '../../config/fonts';
 // import Icon from 'react-native-vector-icons/FontAwesome';
-const subElStyle = {  elevation:4, shadowOffset: {  }, shadowColor: "grey", shadowOpacity: 0.5, shadowRadius: 10,backgroundColor: "white", margin: 4, borderRadius: 8, alignItems: 'center', justifyContent: 'center'} 
+const subElStyle = {  elevation:4, shadowOffset: {  }, shadowColor: "grey", shadowOpacity: 0.5, shadowRadius: 10,backgroundColor: "#444444", margin: 4, borderRadius: 8, alignItems: 'center', justifyContent: 'center'} 
 const HeaderComponent = (props) => {
         let parentRoute = (props.navigation && props.navigation.state.params && props.navigation.state.params.parentRoute) ? props.navigation.state.params.parentRoute : ""; 
         const goBack = () => {

@@ -34,13 +34,13 @@ export default class Dashboard extends Component {
       <View style={{flex: 1}}>   
         <TouchableOpacity  style={subElStyle} onPress={() => this.goToPostPage('clientCreate')}>
        
-        <Text>Client Create</Text> 
+        <Text style={{ color: 'white' }}>Client Create</Text> 
         
         </TouchableOpacity>
         </View>
         <View style={{flex: 1}}>   
         <TouchableOpacity  style={subElStyle} onPress={() => this.goToPostPage('ERPwebview')}>
-           <Text>ERP</Text>
+           <Text style={{ color: 'white' }}>ERP</Text>
        
         </TouchableOpacity>
         </View>
@@ -57,9 +57,10 @@ export default class Dashboard extends Component {
 const mainDivStyle = { margin:5,marginTop: 4, padding:10, marginBottom: 10,}
 const subElStyle = {  justifyContent: 'center',
 alignItems: 'center',
-backgroundColor: '#e8e8e8', width:'90%', height:100,elevation:4, shadowOffset: {  }, shadowColor: "grey", shadowOpacity: 0.5, shadowRadius: 10,padding:5,marginBottom: 5, backgroundColor: "#e8e8e8", borderRadius: 8,} 
+backgroundColor: "#444444",
+ width:'90%', height:100,elevation:4, shadowOffset: {  }, shadowColor: "grey", shadowOpacity: 0.5, shadowRadius: 10,padding:5,marginBottom: 5, borderRadius: 8,} 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: 'black',
   },
 })

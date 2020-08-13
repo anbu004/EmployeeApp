@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import api from '../../config/OdooConnect';
 import { StyleSheet, Text, View, Alert, TextInput, Image, TouchableOpacity } from 'react-native';
 import Toast from 'react-native-simple-toast';
+import Icon from 'react-native-vector-icons/FontAwesome';
 export default class Login extends Component {
   state = {
     user_name: "dataentry01@abinfocom.com",
